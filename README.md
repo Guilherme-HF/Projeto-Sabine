@@ -6,9 +6,9 @@
 Organizar o cronograma das aulas de assistência, eliminar as filas para o atendimento e com os resultados esperados de melhorar a satisfação dos professores, alunos, secretários e coordenadores do curso e aumentar a frequência dos alunos.
 
 ## Integrantes
-Guilherme Hilgemberg Franco - Guilherme-HF
-Nathalia Henrique - nathihenrique
-Vinicius Karpinski Silva - Vinicius Karpinski
+-Guilherme Hilgemberg Franco - Guilherme-HF
+-Nathalia Henrique - nathihenrique
+-Vinicius Karpinski Silva - Vinicius Karpinski
 
 ## Funcionalidades principais
 
