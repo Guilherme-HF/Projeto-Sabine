@@ -8,4 +8,8 @@ OBJETIVOS DOS TESTES: Verificar o cadastro/agendamentos de horários para aulas/
   1.4 - Verifica se a secretaria consegue cancelar os hórarios; 
   1.5 - Verifica se o sistema encaminha as mensagens (duvidas/atestados/solicitação de cancelamento de horario);
 
-2.0
+2.0 - Teste de Integração:
+  2.1 - Verifica se o processo de aluno cancelando horário chega a secretária que avalia a situação assim gerando o encerramento do horário marcado que acarreta em uma notificação ao ministrante e ao sistma para que mais alunos vejam o horário disponível
+  2.2 - Verifica se o sistema notifica quando algum ministrante/aluno/secretaria encaminha uma mensagem pessoal ou um aviso público ao sistema;
+  2.3 - Verifica se os hórarios agendados já não foram agendados além de avaliar e disponivilizar aulas somente durante dias úteis, neste caso o próprio sistema demarca hórarios livres se baseando na disponibilidade do ministrante e nos dias úteis da semana)
+  2.4 - Verifica se a secretaria consegue adicionar/retirar um dia ao calendário (Retirar todas as aulas de um dia que era pra ter aula/reagendar aulas para um dia que não deveria ter aula)
