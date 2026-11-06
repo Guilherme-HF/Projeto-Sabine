@@ -1,4 +1,6 @@
 gui
 OBJETIVOS DOS TESTES: Verificar o cadastro/agendamentos de horários para aulas/ministrante da aula/Status da Sala/Presença/
 
-001 - 
+1.0 - Teste Unitário:
+  1.1 - Verifica se a pessoa é cadastrada, no código, o sistema verifica se o ID e a senha batem com o digitado;
+  1.2 - Verifica se a escalabilidade do aluno está dentro do previsto(
