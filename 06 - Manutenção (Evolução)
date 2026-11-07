@@ -3,14 +3,16 @@
   1.2 - No sistema o ministrante deverá lançar a presença das aulas (tanto a aula padrão quanto a aula tira-dúvidas), informar o número de questões que o aluno separou;
   1.3 - O sistema deverá ter uma aba de feedbacks a fim de avaliar o programa, além da avaliação de cada ministrante após a aula;
   1.4 - O sistema deve notificar qualquer pessoa sobre horários de aulas disponíveis e recados;
-  1.5 - O cordenador e a secretaria devem ter acesso a informações exclusivas (feedbacks/reclamações/dificuldades);
+  1.5 - O cordenador e a secretaria devem ter acesso (há solicitação de acesso para todos os indivíduos) a informações exclusivas (feedbacks/reclamações/dificuldades);
 
 2.0 Manutenção/Evolução:
-  2.1 - O sistema deverá, primeiramente, fazer o fluxo corretamente a fim de implantar uma manutenção, contudo, caso o fluxo se desorganize deverá haver introduções de resoluções (etapas mais simples e diretas);
+  2.1 - O sistema deverá, primeiramente, fazer o fluxo corretamente a fim de implantar uma manutenção, contudo, caso o fluxo se desorganize deverá haver introduções de resoluções (Ajustar um problema claro, adaptar-se  á um problema);
   2.2 - No futuro o sistema fará aulas específicas para vestibulares da região dos campos gerais, então o sistema deverá ter um pack de atualizações, que trará dúvidas mais frequentes em modelo tabela para facilitar a vida dos ministrantes, aulas online/gravadas, e uma área de materiais;
   2.3 - O projeto terá o intuito de fazer parcerias com as Universidades,cursinhos e escolas com o intuito de trazer mais ministrantes que lançem os materiais, gravem aulas, e principalmente, façam lives mata questões de maneira remota e presencial;
   2.4 - O sistema fará um rank de melhores ministrates por matéria, assim os melhores receberão um auxilio semestralmente, focado na região em que a sede/local está usando o sistema, isto caso o sistema seja usado em mais de um local;
-  2.5 - O sistema calculará as avaliações recebidas pelos alunos e outros ministrantes a fim de avaliar ele;
+  2.5 - O sistema calculará as avaliações recebidas pelos alunos e outros ministrantes a fim de avaliar ele (a avaliação se divide pela quantidade de alunos presente em sua aula);
   2.6 - O sistema fará backups 3 vezes ao dia a fim de não perder as informações mensais/semanais;
   2.7 - O sistema irá funcionar como uma agenda para os alunos, o qual ele demarca os horários das aulas, os conteúdos e os materiais com o intuito de facilitar as aulas que os alunos tem interesse;
-  2.8 - O sistema junto a uma IA treinada irá avaliar as situações de cancelamentos das aulas, nele haverá um funcionário que certificará o processo da IA, assim ajustando a função da secretária;
+  2.8 - O sistema junto a uma IA treinada irá avaliar as situações de cancelamentos das aulas(ela trará os pontos principais e sugere classificações além de registrar a situação final que o funcionário dará, válido ou nã0), nele haverá um funcionário que certificará o processo da IA, assim ajustando a função da secretária;
+  2.9 - O sistema terá módulos que dependem do vestibular assim cada material se alinha a cada vestibular;
+  2.9.1 - O sistema avalia os professores um semestre antes de sair o resultado, assim o professor terá 6 meses para se adaptar e consolidar no projeto;
