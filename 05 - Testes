@@ -11,6 +11,7 @@ OBJETIVOS DOS TESTES: Verificar o cadastro/agendamentos de horários para aulas/
   1.7 - Verifica se o ministrante lançou a quantidade de perguntas que o aluno levou para a aula de reforço;
   1.8 - Verifica se o cordenador do curso (geral) valida o hórarios marcado;
   1.9 - Verifica se os alunos conseguem enviar seus feedbacks após uma aula;
+  1.9.1 - Verifica se há os erros do sistema podem ser reajustados (problemas nos cadastros, questões e agendamentos);
 
 2.0 - Teste de Integração:
   2.1 - Verifica se o processo de aluno cancelando horário chega a secretária que avalia a situação assim gerando o encerramento do horário marcado que acarreta em uma notificação ao ministrante e ao sistma para que mais alunos vejam o horário disponível
@@ -19,12 +20,15 @@ OBJETIVOS DOS TESTES: Verificar o cadastro/agendamentos de horários para aulas/
   2.4 - Verifica se a secretaria consegue adicionar/retirar um dia ao calendário (Retirar todas as aulas de um dia que era pra ter aula/reagendar aulas para um dia que não deveria ter aula)
   2.5 - Verifica se as aulas semanais já estão com data marcada antes de qualquer horário de reforço da semana;
   2.6 - Avalia se o aluno poderá marcar mais de uma aula com uma matéria X na mesma semana (Cada aluno pode levar 5 questões por matéria), asasim alinhando calendário com a quantidade de perguntas que o ministrante lança no sistema que guarda o número de perguntas por aluno;
+  2.7 - Avalia se caso o aluno passe por um problema aparecerá um sequência de soluções ou indique o que está errado, caso não ocorra, solicitará que o aluno entre em contato com a secretaria;
 
 3.0 - Teste de Aceitação:
   3.1 - Avalia os feedbacks dos alunos sobre as aulas teóricas junto as do reforço;
   3.2 - Avalia os feedbacks dos ministrantes sobre o desenvolver da turma/aluno além do nível das questões que os alunos trazem.
   3.3 - Avalia se o fluxo (secretaria, aluno, ministrante) está ocorrendo sem gargalos/dificuldades na interação;
   3.4 - Avalia a dificuldade dos alunos sobre questões de horário e se cada matéria tem um diferencial que os faça vir a aula/aula reforço;
+  3.5 - Verifica se o cordenador consegue visualizar todas as informações necessárias para a avaliação do ministrante;
+  3.6 - Verifica se o ministrante consegue identificar e registrar as questões que o aluno trouxe;
 
 4.0 - Teste de Sistema:
   4.1 - Verificar se o sistema funciona se complementado e realizando o seguinte processo:
@@ -49,4 +53,5 @@ OBJETIVOS DOS TESTES: Verificar o cadastro/agendamentos de horários para aulas/
   6.2 - Na segunda etapa realizar um teste no qual ceertas funções dependem uma das outras se interligam e se complementam;
   6.3 - Na terceira etapa realizar uma avaliação da satisfação dos clientes e dos stakeholders;
   6.4 - Na quarta etapa testar o sistema rodando com cadastros/agendamentos/cancelamentos/solicitações/possíveis falhas/faltas/feedbacks;
-          
+  6.5 - Teste prático, simulação de cadastros, erros cadastrais, reagendamento de aulas com mais de 3 horas de antecedência e com menos, fluxo de contatos e presenças;
+
