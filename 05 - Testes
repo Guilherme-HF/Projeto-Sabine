@@ -4,14 +4,13 @@ OBJETIVOS DOS TESTES: Verificar o cadastro/agendamentos de horários para aulas/
 1.0 - Teste Unitário:
   1.1 - Verifica se a pessoa é cadastrada, no código, o sistema verifica se o ID e a senha batem com o digitado;
   1.2 - Verifica se a escalabilidade do aluno está dentro do previsto (5 Questões por matéria);
-  1.3 - Verifica se os horários de aula se alinham com a disponibilidade dos ministrantes;
-  1.4 - Verifica se a secretaria consegue cancelar os hórarios; 
-  1.5 - Verifica se o sistema encaminha as mensagens (duvidas/atestados/solicitação de cancelamento de horario) para a secretaria, professor e cordenador;
+  1.3 - Verifica se os horários marcados pelos alunos estão dentro dos horários disponivéis dos ministrantes;
+  1.4 - Verifica se a secretária consegue intervir e notificar o cliente caso ela altere algo (agendamentos e comunicados);
+  1.5 - Verifica se o sistema encaminha as mensagens e notifica (duvidas/atestados/solicitação de cancelamento de horario) para a secretaria, professor e cordenador;
   1.6 - Verifica se não há nenhuma duplicidade de hórarios com o mesmo ministrante (Horário de aula sendo o mesmo que o horário de uma aula de reforço com o mesmo ministrante);
   1.7 - Verifica se o ministrante lançou a quantidade de perguntas que o aluno levou para a aula de reforço;
-  1.8 - Verifica se o cordenador do curso (geral) aceita o hórarios marcado;
-  1.9 - Verifica se o cordenador das aula (geral) aprova o fluxos, os ministrantes das aulas;
-  1.9.1 - Verifica se os alunos podem dar um feedback sobre aula/sistema/dúvidas/ministrantes;
+  1.8 - Verifica se o cordenador do curso (geral) valida o hórarios marcado;
+  1.9 - Verifica se os alunos conseguem enviar seus feedbacks após uma aula;
 
 2.0 - Teste de Integração:
   2.1 - Verifica se o processo de aluno cancelando horário chega a secretária que avalia a situação assim gerando o encerramento do horário marcado que acarreta em uma notificação ao ministrante e ao sistma para que mais alunos vejam o horário disponível
