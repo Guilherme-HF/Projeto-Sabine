@@ -1,1 +1,16 @@
+1.0 - Objetivo atual:
+  1.1 - O sistema tem a obrigação de agendar horários de aulas (mata questões, tira-dúvida), informar um calendáriode dias letivos (toda semana haverá uma aula por dia de uma matéria diferente), reagendar horários, ter uma lista de contatos;
+  1.2 - No sistema o ministrante deverá lançar a presença das aulas (tanto a aula padrão quanto a aula tira-dúvidas), informar o número de questões que o aluno separou;
+  1.3 - O sistema deverá ter uma aba de feedbacks a fim de avaliar o programa, além da avaliação de cada ministrante após a aula;
+  1.4 - O sistema deve notificar qualquer pessoa sobre horários de aulas disponíveis e recados;
+  1.5 - O cordenador e a secretaria devem ter acesso a informações exclusivas (feedbacks/reclamações/dificuldades);
 
+2.0 Manutenção/Evolução:
+  2.1 - O sistema deverá, primeiramente, fazer o fluxo corretamente a fim de implantar uma manutenção, contudo, caso o fluxo se desorganize deverá haver introduções de resoluções (etapas mais simples e diretas);
+  2.2 - No futuro o sistema fará aulas específicas para vestibulares da região dos campos gerais, então o sistema deverá ter um pack de atualizações, que trará dúvidas mais frequentes em modelo tabela para facilitar a vida dos ministrantes, aulas online/gravadas, e uma área de materiais;
+  2.3 - O projeto terá o intuito de fazer parcerias com as Universidades,cursinhos e escolas com o intuito de trazer mais ministrantes que lançem os materiais, gravem aulas, e principalmente, façam lives mata questões de maneira remota e presencial;
+  2.4 - O sistema fará um rank de melhores ministrates por matéria, assim os melhores receberão um auxilio semestralmente, focado na região em que a sede/local está usando o sistema, isto caso o sistema seja usado em mais de um local;
+  2.5 - O sistema calculará as avaliações recebidas pelos alunos e outros ministrantes a fim de avaliar ele;
+  2.6 - O sistema fará backups 3 vezes ao dia a fim de não perder as informações mensais/semanais;
+  2.7 - O sistema irá funcionar como uma agenda para os alunos, o qual ele demarca os horários das aulas, os conteúdos e os materiais com o intuito de facilitar as aulas que os alunos tem interesse;
+  2.8 - O sistema junto a uma IA treinada irá avaliar as situações de cancelamentos das aulas, nele haverá um funcionário que certificará o processo da IA, assim ajustando a função da secretária;
