@@ -11,6 +11,7 @@ OBJETIVOS DOS TESTES: Verificar o cadastro/agendamentos de horários para aulas/
   1.7 - Verifica se o ministrante lançou a quantidade de perguntas que o aluno levou para a aula de reforço;
   1.8 - Verifica se o cordenador do curso (geral) aceita o hórarios marcado;
   1.9 - Verifica se o cordenador das aula (geral) aprova o fluxos, os ministrantes das aulas;
+  1.9.1 - Verifica se os alunos podem dar um feedback sobre aula/sistema/dúvidas/ministrantes;
 
 2.0 - Teste de Integração:
   2.1 - Verifica se o processo de aluno cancelando horário chega a secretária que avalia a situação assim gerando o encerramento do horário marcado que acarreta em uma notificação ao ministrante e ao sistma para que mais alunos vejam o horário disponível
@@ -25,3 +26,28 @@ OBJETIVOS DOS TESTES: Verificar o cadastro/agendamentos de horários para aulas/
   3.2 - Avalia os feedbacks dos ministrantes sobre o desenvolver da turma/aluno além do nível das questões que os alunos trazem.
   3.3 - Avalia se o fluxo (secretaria, aluno, ministrante) está ocorrendo sem gargalos/dificuldades na interação;
   3.4 - Avalia a dificuldade dos alunos sobre questões de horário e se cada matéria tem um diferencial que os faça vir a aula/aula reforço;
+
+4.0 - Teste de Sistema:
+  4.1 - Verificar se o sistema funciona se complementado e realizando o seguinte processo:
+          - O aluno se cadastras;
+          - O aluno tem acesso aos horários de aula;
+          - O aluno agenda um horário/desmarca(com 3 horas de antecedência)
+          - O aluno manda um arquivo solicitando o cancelamento da aula caso ele necessite cancelar com menos de 3 horas do horário da aula;
+          - O aluno envia mensagens para a secretaria/ministrante;
+          - A secretária avalia a situação do cancelamento e anexa uma situação (Válida ou Inválida);
+          - O ministrante tem acesso a seus horário de aula/dúvidas dos alunos;
+          - O cordenador tem acesso a planilha de feedbacks/dúvidas/agendamentos/presença;
+          - O ministrante lança no sistema as questões que o aluno X veio tirar com ele, o tempo da aula e o feedback sobre a aula de reforço;
+  4.2 - O sistema funciona integrado com as aulas, assim um coopera com o outro;
+
+5.0 - Metas dos testes:
+  5.1 - Avaliar se o sistema funciona com um fluxo suave e responscavel com o intuito de coletar dados e organizado;
+  5.2 - Avaliar se uma função do sistema não quebra outras;
+  5.3 - Avaliar se cada ação do teste foi feita de maneira singular e clara sem nenhuma interferência(Mensagem não enviada/fluxo não ocorrendo);
+
+6.0 - Métodos:
+  6.1 - Na primeira etapa fazer um teste simples no sistema, vendo se ele realiza as principais funções dele além de ser rápido e efetivo em cada parte;
+  6.2 - Na segunda etapa realizar um teste no qual ceertas funções dependem uma das outras se interligam e se complementam;
+  6.3 - Na terceira etapa realizar uma avaliação da satisfação dos clientes e dos stakeholders;
+  6.4 - Na quarta etapa testar o sistema rodando com cadastros/agendamentos/cancelamentos/solicitações/possíveis falhas/faltas/feedbacks;
+          
