@@ -1,73 +1,41 @@
-4.4 Projeto e arquitetura
+1. Visão arquitetural em alto nivel
+O sistema utiliza uma Arquitetura em 3 Camadas para organizar o acesso dos quatro perfis (Aluno, Ministrante, Secretária e Coordenador):
+  Camada de Apresentação (Interface): Telas web/mobile com login único (ID e senha) que direcionam cada usuário para seu respectivo painel.
+  Camada de Lógica de Negócio (Regras): Dividida em 4 módulos principais:
+    Agendamento e Calendário: Libera horários apenas em dias úteis e bloqueia choques de horário do ministrante.
+    Cancelamentos: Controla o prazo de 3 horas de antecedência e a fila de validação de atestados pela secretária.
+    Acadêmico: Controla o limite de 5 questões por matéria, registro de presença e tempo de aula.
+    Comunicação e Feedback: Dispara avisos automáticos e calcula a avaliação dos ministrantes.
+  Camada de Dados (Banco de Dados): Armazena cadastros, agendamentos, arquivos de justificativa, presenças e feedbacks, realizando backups automáticos 3 vezes ao dia.
 
-1. Visão arquitetural em alto nível
+2. Princípios de Projeto
+  Abstração: O aluno vê apenas os horários livres da matéria desejada, sem precisar lidar com as regras internas que cruzam dias úteis, feriados e a agenda de aulas teóricas do professor.
+  Modularidade: O sistema é dividido em partes independentes (Agendamento, Cancelamentos, Acadêmico e Comunicação), permitindo alterar uma regra sem afetar o restante do sistema.
+  Separação de Interesses: A interface apenas coleta os dados do usuário; a camada de negócio valida as regras (ex.: prazo de 3 horas); e o banco de dados apenas armazena as informações aprovadas.
+  Encapsulamento: O status de uma vaga (Disponível, Ocupada, Em Análise) não pode ser alterado livremente pela tela; ele só muda por ações controladas (como a aprovação da secretária).
 
-O sistema tem três camadas:
+3. Exemplos de Coesão e Acoplamento
+  Coesão (cada módulo focado em uma única tarefa):
+    Módulo de Cancelamento: Cuida exclusivamente de verificar o prazo de 3 horas e encaminhar justificativas tardias para a secretária.
+    Módulo de Avaliação: Focado apenas em calcular a média de notas do ministrante dividida pela quantidade de alunos presentes na aula.
+  Acoplamento (baixa dependência entre módulos):
+    Agendamento e Notificações: Quando um horário é cancelado, o módulo de agendamento apenas solicita o envio de um alerta, sem depender de como a mensagem será entregue na tela ou por e-mail.
+    Painel do Coordenador: Apenas lê os dados prontos de presença e feedbacks para exibir relatórios, sem interferir no funcionamento das telas de agendamento.
 
-Apresentação: interface web usada por aluno, ministrante, secretária e coordenador.
-Serviços: regras do sistema, divididas em cinco componentes:
-  Usuários: cadastro, login e permissões.
-  Agenda: calendário, horários, agendamento, reagendamento e cancelamento.
-  Aulas: presença e número de questões que o aluno levou.
-  Comunicação: mensagens, avisos e notificações.
-  Feedback e Relatórios: avaliações e painel da secretária e do coordenador.
-Dados: banco de dados com usuários, horários, aulas, presenças, mensagens e avaliações.
+4. Refinamento de Funcionalidade e Refatoração Futura
+  Refinamento (Funcionalidade: Cancelar Aula de Reforço):
+    Aluno seleciona a aula agendada e clica em Cancelar.
+    Sistema compara o horário atual com o horário da aula.
+    Se faltarem 3 horas ou mais: Cancela na hora, libera a vaga no banco e notifica o ministrante.
+    Se faltarem menos de 3 horas: Exige anexo de justificativa, altera o status para Em Análise e envia à secretária.
+    Secretária avalia o anexo e marca como Válida (libera a vaga e notifica) ou Inválida (mantém o registro).
+  Refatoração Futura: 
+  Quando o projeto atingir 300 alunos, a análise manual de justificativas poderá gerar atrasos. 
+  Como melhoria interna, o módulo de cancelamentos será conectado a um serviço de IA que lê os anexos e sugere automaticamente se o pedido é Válido ou Inválido, deixando para a secretária apenas a confirmação final.
 
-Interfaces entre os componentes:
+  5. Protótipos de Tela e Navegação (3 telas essenciais)
+    Tela 1 – Portal do Aluno: Exibe o calendário de dias úteis por matéria para agendar horário (informando até 5 questões), botão para cancelar/anexar justificativa e campo de feedback após a aula.
+    Tela 2 – Painel do Ministrante: Lista os horários e alunos inscritos no dia, com campos para marcar presença, tempo de atendimento e quantidade real de questões trazidas.
+    Tela 3 – Painel da Secretária: Permite bloquear ou reagendar dias no calendário e exibe a lista de cancelamentos com menos de 3 horas para abrir o anexo e marcar como Válido ou Inválido.
+  Navegação: Todos os usuários entram pela tela única de login (ID e senha) e são direcionados automaticamente para o painel do seu perfil.
 
-Agenda → Comunicação: pede o envio de avisos.
-Aulas → Agenda: consulta as aulas marcadas.
-Feedback e Relatórios → Aulas: lê presença e questões.
-
-Fluxo principal (cancelamento de aula):
-
-O aluno pede o cancelamento.
-A Agenda confere se faltam mais de 3 horas.
-Se sim, cancela e libera o horário.
-Se não, a solicitação vai à secretária, que a classifica como válida ou inválida.
-A Agenda encerra o horário e a Comunicação avisa aluno e ministrante.
-
-2. Decisões de projeto
-Abstração: quem usa a Agenda só pede “agendar” ou “cancelar”, sem conhecer como a regra das 3 horas é conferida.
-Modularidade: cinco módulos independentes permitem desenvolver e testar cada parte separadamente.
-Separação de interesses: a interface só mostra e coleta dados, e as regras (3 horas, 5 questões por matéria, sem horários repetidos, dias úteis) ficam nos serviços.
-Encapsulamento: o número de questões de cada aluno só é alterado pelo módulo Aulas, e os demais apenas consultam.
-
-3. Coesão e acoplamento
-
-Coesão:
-
-Agenda: só trata de calendário, horários, agendamento e cancelamento.
-Comunicação: só trata de mensagens, avisos e notificações.
-
-Acoplamento:
-
-Agenda e Comunicação: a Agenda só pede o envio de um aviso, sem saber como ele é entregue (baixo acoplamento).
-Feedback e Relatórios e Aulas: o primeiro só lê presença e questões, sem modificá-las (dependência limitada a consulta).
-
-4. Refinamento e refatoração
-
-Refinamento da funcionalidade “agendar aula”:
-
-Requisito: o aluno agenda uma aula em um horário disponível.
-Passos:
-Mostrar horários livres, só em dias úteis.
-O aluno escolhe um horário.
-O sistema confere se não há conflito com outra aula do ministrante e se o aluno não passou de 5 questões por matéria.
-O sistema reserva o horário.
-O sistema envia a confirmação.
-Componentes: exibição, conferência e reserva na Agenda, escolha na interface, aviso na Comunicação.
-
-Refatoração futura:
-
-Hoje a secretária analisa sozinha os cancelamentos com menos de 3 horas.
-Se uma IA for adicionada para resumir o caso e sugerir uma classificação, ela entraria como um componente separado, chamado pela Agenda.
-A Agenda não muda por dentro e a decisão final continua com a secretária.
-
-5. Telas e navegação essencial
-
-Telas (baixa fidelidade):
-
-Agendar aula (aluno): escolha de matéria e ministrante, lista de horários livres e botões “Confirmar” e “Voltar”.
-Solicitar cancelamento (aluno): aula selecionada, aviso de menos de 3 horas, justificativa, anexo e botão “Enviar solicitação”.
-Registro da aula (ministrante): aluno, presença, número de questões, tempo de aula, feedback e botão “Salvar”.
