@@ -1,5 +1,5 @@
 Qualidade, Verificação e Validação
-1.0 - Atributos de Qualidade (4 atributos e forma de avaliação):
+1.0 - Atributos de Qualidade:
   1.1 - Confiabilidade: Impede agendamentos duplicados e perda de dados (backups 3x ao dia). Avaliação: Simular dois alunos reservando a última vaga ao mesmo tempo e testar a restauração do backup.
   1.2 - Usabilidade: Permite agendar e cancelar aulas de forma rápida e intuitiva. Avaliação: Cronometrar usuários novos concluindo um agendamento em menos de 1 minuto sem ajuda.
   1.3 - Disponibilidade: Mantém o sistema no ar durante todo o horário letivo. Avaliação: Monitorar o sistema nos dias úteis exigindo disponibilidade acima de 99%.
@@ -7,5 +7,5 @@ Qualidade, Verificação e Validação
 2.0 - Diferença entre Verificação e Validação:
   2.1 - Verificação ("Construímos o sistema do jeito certo?"): Confere se o software cumpre as regras técnicas planejadas. Exemplo: Testar se o sistema bloqueia mais de 5 questões por matéria e impede choque de horário do ministrante.
   2.2 - Validação ("Construímos o sistema certo?"): Confere na prática se o sistema resolve o problema real dos usuários. Exemplo: Simular o uso com alunos, ministrantes e secretaria para confirmar o fim das filas e o aumento da frequência.
-3.0 Testes e 4.0 Rastreabilidade: 
+3.0 Casos de Testes e 4.0 Rastreabilidade: 
   https://docs.google.com/spreadsheets/d/19FJGx41sIpc3i7CZdVkb-YfYzT_MnxRDmFHQZDRkYto/edit?usp=sharing
