@@ -25,4 +25,4 @@ Organizar o cronograma das aulas de assistência, eliminar as filas para o atend
 Fundamentos de Engenharia de Software
 
 ## Entrega
-
+Acessar arquivo "entrega_final.pdf"
