@@ -25,5 +25,4 @@ Organizar o cronograma das aulas de assistência, eliminar as filas para o atend
 Fundamentos de Engenharia de Software
 
 ## Entrega
-https://docs.google.com/document/d/1yk_-IOqrN4YPvG9zoLB8VIyM_0dPvwWf0EWRPGA3WTY/edit?usp=sharing
 
